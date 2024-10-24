@@ -1,0 +1,442 @@
+:root {
+    --header-text: "Architects Daughter", cursive;
+    --subheader-text: "Cookie", cursive;
+    --secondary-text: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --button-text: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --primary-color: rgb(231, 51, 141);
+    --button-color: lightpink;
+    --secondary-color: rgb(247, 183, 222);
+    --hover-color: violet;
+    --image-width: 85%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 15px;
+}
+
+h1.header {
+    font-family: var(--header-text);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 60px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+  }
+
+  img.home-icon {
+    align-items: start;
+    width: 70px;
+    margin-left: 10px;
+  }
+
+  img.home-icon:hover {
+    background-color: var(--hover-color);
+    transition: 0.5s ease;
+  }
+  
+  img.cart-icon {
+    align-items: end;
+    width: 50px;
+    background-color: rgb(231, 51, 141);
+    padding: 7px;
+    margin-right: 20px;
+  }
+
+  img.cart-icon:hover {
+    background-color: var(--hover-color);
+    transition: 0.25s ease;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: var(--header-text);
+    font-weight: 500;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+
+  .navigation-buttons {
+    padding: 15px;
+    margin-top: 25px;
+    font-family: var(--button-text);
+    font-size: large;
+    border-radius: 15px;
+    background-color: var(--button-color);
+    cursor: pointer;
+    
+  }
+
+  .navigation-buttons:hover {
+    background-color: black;
+    color: var(--hover-color);
+    transition: 0.25s ease;
+    border: 2px solid var(--primary-color);
+  }
+
+  #toggle-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  body.light-mode {
+    background-color: white;
+  }
+
+  body.dark-mode {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    img,
+    img#product-img {
+        border: 1px solid white;
+    }
+    form {
+        border: 5px solid white;
+    }
+    img.home-icon,
+    img.cart-icon {
+        border: none;
+    }
+    img.me-at-stockholm {
+        padding: 0px;
+        margin: 25px;
+    }
+  }
+
+
+  section#info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "amsterdam travel-info"
+        "travel-tip nyc";
+    padding: 50px;
+    gap: 20px;
+  }
+
+  img.amsterdam {
+    grid-area: amsterdam;
+    width: var(--image-width);
+  }
+
+  h3.travel-info-header, 
+  p.travel-info-p {
+    grid-area: travel-info;
+  }
+
+  h3.tip-info-header,
+  p.tip-info-p {
+    grid-area: travel-tip;
+  }
+
+  img.nyc {
+    grid-area: nyc;
+    width: var(--image-width);
+    margin-left: 60px;
+  }
+
+  h3 {
+    font-family: var(--subheader-text);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px; 
+  }
+
+  span.highlight {
+    color:var(--primary-color);
+    text-decoration: underline;
+  }
+
+  p {
+    font-family: var(--secondary-text);
+    font-size: 18px;
+  }
+  
+  footer {
+    font-family: var(--secondary-text);
+    font-size: 10px;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+  }
+
+  #about {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+        "title title"
+        "picture text";
+  }
+
+  h2.about-me {
+    grid-area: title;
+    background-color: black;
+    color: var(--secondary-color);
+    padding: 10px 150px 10px 150px;
+    justify-self: center;
+    
+  }
+
+  img.me-at-stockholm {
+    grid-area: picture;
+    width: var(--image-width);
+    padding: 30px;
+    display: flex;
+  }
+
+  p.about-me-info {
+    grid-area: text;
+  }
+
+  span.highlight2 {
+    color: var(--primary-color);
+    font-weight: bolder;
+  }
+
+  div > #top-button {
+    display: block;
+    font-family: var(--header-text);
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px;
+    color: var(--button-color);
+  }
+
+  #top-button:hover {
+    color: var(--hover-color);
+    transition: 0.5s ease;
+  }
+
+  form {
+    font-family: var(--secondary-text);
+    color: var(--primary-color);
+    font-weight: bolder;
+    padding: 50px;
+    border: 5px solid black;
+    margin-top: 10px;
+  }
+
+  input#email,
+  input#name {
+    width: 500px;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border: 3px solid blue;
+  }
+
+  input#email,
+  input#name,
+  select,
+  textarea {
+    background-color: var(--secondary-color);
+    font-family: var(--secondary-text);
+    margin: 5px;
+  }
+
+  #comment-section {
+    margin-top: 15px;
+  }
+
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "img1 info1"
+        "img2 info2"
+        "img3 info3"
+        "img4 info4"
+        "img5 info5";
+    column-gap: 30px;
+    margin-top: 40px;
+    
+  }
+
+  .product-1-img,
+  .product-2-img,
+  .product-3-img,
+  .product-4-img,
+  .product-5-img {
+    border: 2px solid black;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-cart {
+    cursor: pointer;
+    font-family: var(--button-text);
+    
+  }
+
+  .add-cart:hover {
+    background-color: var(--hover-color);
+  }
+
+
+  h3.product-title {
+    font-size: 40px;
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  span.p-price {
+    color: var(--primary-color);
+    font-family: var(--primary-text);
+    font-size: 20px;
+  }
+
+  .product-1-img {
+    grid-area: img1;
+  }
+
+  .product-1-content {
+    grid-area: info1;
+  }
+
+  .product-2-img {
+    grid-area: img2;
+  }
+
+  .product-2-content {
+    grid-area: info2;
+  }
+
+  .product-3-img { 
+    grid-area: img3;
+  }
+
+  .product-3-content {
+    grid-area: info3;
+  }
+
+  .product-4-img {
+    grid-area: img4;
+  }
+
+  .product-4-content {
+    grid-area: info4;
+  }
+
+  .product-5-img {
+    grid-area: img5;
+  }
+
+  .product-5-content {
+    grid-area: info5;
+  }
+
+
+
+/* RESPONSIVE FOR SMALLER SCREENS */
+  @media screen and (max-width: 600px) {
+    
+    nav {
+        display: block;
+        padding-right: 50px;
+        text-align: center;
+        
+    }
+
+    #toggle-switch {
+        margin-top: 20px;
+    }
+
+    h1.header {
+        font-size: 1.5rem;
+        display: inline;
+    }
+
+    img.home-icon {
+        display: inline;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    img.amsterdam {
+        width: 100%;
+        margin-bottom: 15px;;
+    }
+
+    section#about,
+    h2.subheader,
+    a.about,
+    div.travel-info,
+    img.nyc,
+    img.me-at-stockholm,
+    .cart {
+        display: none;
+    }
+
+    .nav-buttons {
+        display: flex;
+    }
+
+    section#info {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    div.tip-info {
+        border: 5px solid pink;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    input#name,
+    input#email,
+    textarea {
+        width: 250px;
+    }
+
+    form {
+        font-size: 15px;
+        border: 1px solid black;
+        margin: 15px;
+    }
+
+    select > option {
+        font-size: 12px;
+    }
+
+    h3.product-title {
+        font-size: 25px;
+    }
+
+    span.descriptors {
+        display: none;
+    }
+    
+    span.p-price {
+        color: black;
+        background-color: var(--secondary-color);
+        padding: 2px;
+        font-size: 20px;
+    }
+
+  }
+
+  @media screen and (max-width: 425px) {
+
+  }
